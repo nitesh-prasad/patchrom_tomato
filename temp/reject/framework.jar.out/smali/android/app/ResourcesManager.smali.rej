@@ -1,0 +1,33 @@
+*** ResourcesManager.smali	2017-03-30 17:56:27.393796453 +0530
+--- ResourcesManager.smali	2017-03-30 17:58:12.797797379 +0530
+***************
+*** 986,999 ****
+  
+      :cond_b
+      :goto_7
+!     new-instance v16, Landroid/content/res/Resources;
+  
+      .end local v16    # "r":Landroid/content/res/Resources;
+      move-object/from16 v0, v16
+  
+      move-object/from16 v1, p7
+  
+!     invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+  
+      .restart local v16    # "r":Landroid/content/res/Resources;
+      monitor-enter p0
+--- 986,999 ----
+  
+      :cond_b
+      :goto_7
+!     new-instance v16, Landroid/content/res/MiuiResources;
+  
+      .end local v16    # "r":Landroid/content/res/Resources;
+      move-object/from16 v0, v16
+  
+      move-object/from16 v1, p7
+  
+!     invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+  
+      .restart local v16    # "r":Landroid/content/res/Resources;
+      monitor-enter p0

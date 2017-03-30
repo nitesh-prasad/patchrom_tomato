@@ -1,0 +1,19 @@
+*** ./smali/android/graphics/Bitmap.smali	2017-03-30 17:57:06.449796796 +0530
+--- /home/nitesh/patchrom/tomato/temp/new_smali/framework.jar.out/./smali/android/graphics/Bitmap.smali	2017-03-30 17:58:52.101797724 +0530
+***************
+*** 41,47 ****
+  
+  
+  # instance fields
+! .field private mBuffer:[B
+  
+  .field mDensity:I
+  
+--- 41,47 ----
+  
+  
+  # instance fields
+! .field public mBuffer:[B
+  
+  .field mDensity:I
+  

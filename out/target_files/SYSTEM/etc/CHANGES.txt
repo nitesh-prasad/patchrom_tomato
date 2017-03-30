@@ -1,0 +1,216 @@
+===================================
+Since Thu Jul  7 17:58:01 UTC 2016
+===================================
+
+   * android
+37236c9 default.xml: cm: Update to 6.0.1_r52
+
+   * build
+edb9509 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * dalvik
+c27cc46 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * external/boringssl
+9eeaa8c Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * external/libavc
+a76695a Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * external/sepolicy
+0d2bc43 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * external/wpa_supplicant_8
+3d3b2ea Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * frameworks/av
+1e7c9d2 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * frameworks/base
+b6bddad Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD Ticket: CYNGNOS-3020
+
+   * frameworks/native
+cf27ee8 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * hardware/broadcom/wlan
+6915649 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * hardware/cyanogen
+e61dfdc cmhw: Add VibratorHW implementation
+
+   * hardware/libhardware
+65ea8ef Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * hardware/qcom/audio/default
+c6f3e59 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * hardware/qcom/audio-caf/msm8916
+9c523d2 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8952
+dc4a1f6 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8960
+43f190b DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8974
+8c1ea0f DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8994
+4fdc941 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8996
+20a81a5 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * packages/apps/Bluetooth
+80bd5e6 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * packages/apps/Contacts
+a586a52 Contacts metrics: corrected process interval
+
+   * packages/apps/Nfc
+f7ea48e Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * packages/apps/Settings
+d3a1dfe Break out Bluetooth device icon from dashboard reference.
+
+   * system/bt
+f1eada5 Fix call to enable(bool) which changed as part of 049eae4ff84fbbdbc4b0068cb2a217f9f0460bf4
+8c6a7c5 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * vendor/cm
+f1c5ab8 Adapt to 6.0.1_r52 backup whitelist
+2d2eb9a init: Add VibratorHW sysfs permissions
+
+===================================
+Since Wed Jul  6 15:19:35 UTC 2016
+===================================
+
+   * frameworks/base
+2ab71c1 SystemUI: fix qstile page reset timeout
+
+   * packages/apps/CellBroadcastReceiver
+b76e794 Automatic translation import
+
+   * packages/apps/Dialer
+dfa4d5f Automatic translation import
+
+   * packages/apps/Messaging
+e45eb2f Messaging app crashes after a few MMS
+
+   * packages/apps/Profiles
+5972fba Automatic translation import
+
+   * packages/apps/Screencast
+95cdd6a Automatic translation import
+
+   * packages/apps/Settings
+7536d60 InstalledAppDetails: fix refreshing storage summary after force stop
+91c66f1 Automatic translation import
+
+   * packages/apps/Snap
+aca0818 Automatic translation import
+
+   * packages/apps/SoundRecorder
+77399f4 SoundRecorder: onConfigurationChanged dismiss popupmenu
+d0c02a3 Revert "SoundRecorder: onConfigurationChanged dismiss popupmenu"
+a955d4c Automatic translation import
+
+   * packages/services/Telephony
+9ceb4c8 Automatic translation import
+
+   * system/core
+5d90c85 healthd: Write to blink file to fix LED
+
+   * vendor/cmsdk
+1a2589b Automatic translation import
+
+===================================
+Since Tue Jul  5 15:19:42 UTC 2016
+===================================
+
+   * external/stagefright-plugins
+4f5545a stagefright-plugins: Clean up warnings for invalid format strings
+be0ec90 stagefright-plugins: Stop using AVPicture
+
+   * frameworks/base
+94c32d8 SystemConfig: allow app-link to be set to any possible state
+fcd88f4 am: clear protected apps from recents
+95ae413 Automatic translation import
+0cabc1d media:Modify the display of system default ringtone when it is none.
+
+   * packages/apps/Dialer
+9a01de3 Set content intent to final button intent
+
+   * packages/apps/Settings
+d4287ef Prevent orientation changes from destroying/recreating security settings
+e64a234 Settings: Disable sim switch if subscription isn't valid
+c556094 Settings: Don't set the icon for sim activation / deactivation dialog
+
+   * packages/services/Telephony
+f72be63 Automatic translation import
+
+   * vendor/cm
+a04941c cm: overlay: enable otg notification
+
+===================================
+Since Mon Jul  4 15:30:22 UTC 2016
+===================================
+
+   * build
+a68d79c build: Let the verity signer and metadata builders ask for a password
+
+   * device/qcom/common
+94c7d19 power/8996: Disable sched grouping for flings
+
+   * packages/apps/AudioFX
+af5d8a7 Automatic translation import
+
+   * packages/apps/CMUpdater
+71fa33b Automatic translation import
+
+   * packages/apps/CellBroadcastReceiver
+c013f43 Automatic translation import
+561a5be Cleanup for translations
+
+   * packages/apps/Contacts
+1bf2f74 Automatic translation import
+
+   * packages/apps/Dialer
+f1946eb Automatic translation import
+
+   * packages/apps/Gello
+13cad17 Automatic translation import
+
+   * packages/apps/InCallUI
+7cb3472 Automatic translation import
+
+   * packages/apps/Messaging
+cbb0458 Automatic translation import
+
+   * packages/apps/Settings
+b2a048a Automatic translation import
+
+   * packages/apps/Snap
+9c7a687 Automatic translation import
+
+   * packages/apps/SoundRecorder
+c8d0800 Automatic translation import
+
+   * packages/services/Telephony
+c64967f Telephony: Handle PIN locked sim slot swapping between boots.
+8b225b2 Cleanup for translations
+
+   * system/extras
+5c269b8 verity: Let the tools ask for a password if needed
+
+===================================
+Since Sun Jul  3 15:56:31 UTC 2016
+===================================
+
+   * hardware/qcom/audio-caf/msm8996
+4fb5a5a hal: Fix build with HDMI disabled
+
+   * hardware/qcom/display-caf/msm8996
+0bbc949 sdm/hwc: Silence logspam
+

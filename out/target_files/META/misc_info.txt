@@ -1,4 +1,0 @@
-recovery_api_version=3
-fstab_version=1
-use_set_metadata=1
-tool_extensions=.

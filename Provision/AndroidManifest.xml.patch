@@ -1,0 +1,21 @@
+From 60f56c1befa674a1f511d035a23146db763d719d Mon Sep 17 00:00:00 2001
+From: mochangming <mochangming@xiaomi.com>
+Date: Tue, 1 Nov 2016 22:38:19 +0800
+Subject: [PATCH] Patch for AndroidManifest.xml
+
+---
+ Provision/AndroidManifest.xml | 1 +
+ 1 file changed, 1 insertion(+)
+
+--- a/Provision/AndroidManifest.xml
++++ b/Provision/AndroidManifest.xml
+@@ -12,6 +12,7 @@
+     <uses-permission android:name="miui.permission.USE_INTERNAL_GENERAL_API"/>
+     <application android:label="@string/app_name" android:name="ProvisionApplication" android:supportsRtl="true" android:theme="@style/Theme">
+         <uses-library android:name="miui-stat.jar"/>
++        <uses-library android:name="org.cyanogenmod.platform"/>
+         <activity android:configChanges="locale|fontScale|keyboardHidden|layoutDirection|mcc|mnc" android:excludeFromRecents="true" android:name=".activities.DefaultActivity" android:screenOrientation="portrait">
+             <intent-filter android:priority="1000">
+                 <action android:name="android.intent.action.MAIN"/>
+-- 
+2.6.2

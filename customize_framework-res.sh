@@ -37,24 +37,3 @@ function mergyXmlPart() {
 		$XMLMERGYTOOL $src $dst
 	done
 }
-
-if [ $1 = "InCallUI" ];then
-    $XMLMERGYTOOL $1/res/values $2/res/values
-fi
-
-if [ $1 = "MiuiSystemUI" ];then
-    $XMLMERGYTOOL $1/res/values $2/res/values
-fi
-
-if [ $1 = "Provision" ];then
-    applyPatch $1 $2
-fi
-
-if [ $1 = "TeleService" ];then
-    applyPatch $1 $2
-fi
-
-if [ $1 = "SecurityCenter" ];then
-    applyPatch $1 $2
-	sed -i '/- 16/a\sdkInfo:\n  minSdkVersion: '\''23'\''\n  targetSdkVersion: '\''23'\''' $2/apktool.yml
-fi

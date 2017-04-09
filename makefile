@@ -60,18 +60,6 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/bin/app_process32_vendor
 	$(hide) cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
 	@echo remove unnecessary libs!
-	$(hide) rm -rf $(ZIP_DIR)/system/lib64
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_eglfence.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_filtershow_filters.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_jpegstream.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_latinime.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_terminal.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/librsjni.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
-	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so

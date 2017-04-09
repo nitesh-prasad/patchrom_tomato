@@ -564,7 +564,7 @@
 
 .field mLidState:I
 
-.field final mLock:Ljava/lang/Object;
+.field private final mLock:Ljava/lang/Object;
 
 .field mLockScreenTimeout:I
 

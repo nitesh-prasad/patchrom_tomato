@@ -5623,7 +5623,7 @@
     move-object/from16 v0, p0
 
     move/from16 v1, p2
-  
+
     invoke-virtual {v0, v10, v11, v1}, Landroid/content/res/Resources;->getPreloadedDrawable(JI)Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v14

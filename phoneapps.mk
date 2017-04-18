@@ -22,8 +22,10 @@ private-phone-priv-apps := \
 	CMAudioService \
 	CMSettingsProvider \
 	ExternalStorageProvider \
+	FMRadio \
 	FusedLocation \
 	InputDevices \
+	ProximityCalibrate \
 	ProxyHandler \
 	Screencast \
 	SharedStorageBackup \

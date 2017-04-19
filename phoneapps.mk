@@ -16,7 +16,8 @@ private-phone-apps := \
 	Stk \
 	telresources \
 	TimeService \
-	WAPPushManager 
+	WAPPushManager \
+	webview 
 
 private-phone-priv-apps := \
 	AudioFX \

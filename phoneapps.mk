@@ -4,8 +4,11 @@ local-phone-priv-apps = $(private-phone-priv-apps)
 private-phone-apps := \
 	BasicDreams \
 	Bluetooth \
+	BluetoothExt \
+	BluetoothMidiService \
 	CertInstaller \
 	KeyChain \
+	LatinIME \
 	LiveWallpapers \
 	PacProcessor \
 	PicoTts \
@@ -18,6 +21,7 @@ private-phone-apps := \
 private-phone-priv-apps := \
 	AudioFX \
 	BackupRestoreConfirmation \
+	CarrierConfig \
 	CellBroadcastReceiver \
 	CMAudioService \
 	CMSettingsProvider \

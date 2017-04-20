@@ -13794,6 +13794,8 @@
     .line 3659
     const/16 v8, 0x7531
 
+    const-string/jumbo v8, "proc died without state saved"
+
     invoke-static {v4, v8}, Lcom/android/server/am/ActivityStackHook;->writeAmFinishActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
     .line 3663
@@ -14216,7 +14218,6 @@
 .method final requestFinishActivityLocked(Landroid/os/IBinder;ILandroid/content/Intent;Ljava/lang/String;Z)Z
     .locals 6
     .param p1, "token"    # Landroid/os/IBinder;
-    .param p2, "resultCode"    # I
     .param p3, "resultData"    # Landroid/content/Intent;
     .param p4, "reason"    # Ljava/lang/String;
     .param p5, "oomAdj"    # Z
@@ -16965,6 +16966,14 @@
     .line 866
     :cond_5
     :goto_1
+    iget-object v0, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/android/server/am/ActivityStack;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
+
+    invoke-static {v0, v2, v1}, Lcom/android/server/am/ActivityStackInjector;->captureActivityScreenshot(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/am/ActivityRecord;)V
+
     invoke-virtual {p0, v1}, Lcom/android/server/am/ActivityStack;->screenshotActivities(Lcom/android/server/am/ActivityRecord;)Landroid/graphics/Bitmap;
 
     move-result-object v0

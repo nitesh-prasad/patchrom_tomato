@@ -2004,6 +2004,8 @@ system/priv-app/ManagedProvisioning 0 0 755 selabel=u:object_r:system_file:s0 ca
 system/priv-app/ManagedProvisioning/ManagedProvisioning.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/MediaProvider 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/MediaProvider/MediaProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/MiGalleryLockscreen 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/MiGalleryLockscreen/MiGalleryLockscreen.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/MmsService 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/MmsService/MmsService.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/OneTimeInitializer 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0

@@ -1340,10 +1340,10 @@
     .line 520
     new-instance v72, Lcom/android/server/input/MiuiInputManagerService;
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
     move-object/from16 v0, v72
 
-    invoke-direct {v0, v10, v3}, Lcom/android/server/input/MiuiInputManagerService;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
+    invoke-direct {v0, v3, v4}, Lcom/android/server/input/MiuiInputManagerService;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
     :try_end_7
     .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_7} :catch_45
 

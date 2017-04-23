@@ -82,6 +82,8 @@ system/app/LiveWallpapersPicker 0 0 755 selabel=u:object_r:system_file:s0 capabi
 system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LockClock 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LockClock/LockClock.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MiGalleryLockscreen 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/app/MiGalleryLockscreen/MiGalleryLockscreen.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NoiseField 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NoiseField/NoiseField.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/PacProcessor 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1939,6 +1941,8 @@ system/media/audio/ui/VideoStop.ogg 0 0 644 selabel=u:object_r:system_file:s0 ca
 system/media/audio/ui/WirelessChargingStarted.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/ui/camera_click.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/ui/camera_focus.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.android.fmradio.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/org.cyanogenmod.screencast.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/AudioFX 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/AudioFX/AudioFX.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -2004,8 +2008,6 @@ system/priv-app/ManagedProvisioning 0 0 755 selabel=u:object_r:system_file:s0 ca
 system/priv-app/ManagedProvisioning/ManagedProvisioning.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/MediaProvider 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/MediaProvider/MediaProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/priv-app/MiGalleryLockscreen 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/priv-app/MiGalleryLockscreen/MiGalleryLockscreen.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/MmsService 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/MmsService/MmsService.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/OneTimeInitializer 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -2015,6 +2017,9 @@ system/priv-app/PackageInstaller/PackageInstaller.apk 0 0 644 selabel=u:object_r
 system/priv-app/Phonesky 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Phonesky/Phonesky.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/PrebuiltGmsCore 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/PrebuiltGmsCore/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/PrebuiltGmsCore/lib/arm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/PrebuiltGmsCore/lib/arm64 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/ProximityCalibrate 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/ProximityCalibrate/ProximityCalibrate.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

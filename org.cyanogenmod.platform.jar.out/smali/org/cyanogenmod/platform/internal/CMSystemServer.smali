@@ -4,6 +4,10 @@
 
 
 # static fields
+.field private static final ENCRYPTED_STATE:Ljava/lang/String; = "1"
+
+.field private static final ENCRYPTING_STATE:Ljava/lang/String; = "trigger_restart_min_framework"
+
 .field private static final TAG:Ljava/lang/String; = "CMSystemServer"
 
 
@@ -19,13 +23,13 @@
     .param p1, "systemContext"    # Landroid/content/Context;
 
     .prologue
-    .line 36
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
+    .line 41
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/CMSystemServer;->mSystemContext:Landroid/content/Context;
 
-    .line 38
+    .line 42
     new-instance v0, Lorg/cyanogenmod/platform/internal/common/CMSystemServiceHelper;
 
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/CMSystemServer;->mSystemContext:Landroid/content/Context;
@@ -34,8 +38,46 @@
 
     iput-object v0, p0, Lorg/cyanogenmod/platform/internal/CMSystemServer;->mSystemServiceHelper:Lorg/cyanogenmod/platform/internal/common/CMSystemServiceHelper;
 
-    .line 36
+    .line 40
     return-void
+.end method
+
+.method public static coreAppsOnly()Z
+    .locals 2
+
+    .prologue
+    .line 47
+    const-string/jumbo v1, "vold.decrypt"
+
+    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 48
+    .local v0, "cryptState":Ljava/lang/String;
+    const-string/jumbo v1, "trigger_restart_min_framework"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 49
+    const-string/jumbo v1, "1"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    .line 48
+    :goto_0
+    return v1
+
+    :cond_0
+    const/4 v1, 0x1
+
+    goto :goto_0
 .end method
 
 .method private reportWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -44,14 +86,14 @@
     .param p2, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 80
+    .line 96
     const-string/jumbo v0, "CMSystemServer"
 
     const-string/jumbo v1, "***********************************************"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
+    .line 97
     const-string/jumbo v0, "CMSystemServer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,7 +116,7 @@
 
     invoke-static {v0, v1, p2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 79
+    .line 95
     return-void
 .end method
 
@@ -82,20 +124,20 @@
     .locals 3
 
     .prologue
-    .line 47
+    .line 58
     :try_start_0
     invoke-direct {p0}, Lorg/cyanogenmod/platform/internal/CMSystemServer;->startServices()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
+    .line 55
     return-void
 
-    .line 48
+    .line 59
     :catch_0
     move-exception v0
 
-    .line 49
+    .line 60
     .local v0, "ex":Ljava/lang/Throwable;
     const-string/jumbo v1, "System"
 
@@ -103,14 +145,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
+    .line 61
     const-string/jumbo v1, "System"
 
     const-string/jumbo v2, "************ Failure starting cm system services"
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 51
+    .line 62
     throw v0
 .end method
 
@@ -118,10 +160,10 @@
     .locals 11
 
     .prologue
-    .line 56
+    .line 67
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/CMSystemServer;->mSystemContext:Landroid/content/Context;
 
-    .line 57
+    .line 68
     .local v1, "context":Landroid/content/Context;
     const-class v6, Lcom/android/server/SystemServiceManager;
 
@@ -131,32 +173,32 @@
 
     check-cast v5, Lcom/android/server/SystemServiceManager;
 
-    .line 58
+    .line 69
     .local v5, "ssm":Lcom/android/server/SystemServiceManager;
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    .line 59
-    const v7, 0x3f04000a
+    .line 70
+    const v7, 0x3f05000b
 
-    .line 58
+    .line 69
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 61
+    .line 72
     .local v3, "externalServices":[Ljava/lang/String;
     const/4 v6, 0x0
 
     array-length v7, v3
 
     :goto_0
-    if-ge v6, v7, :cond_1
+    if-ge v6, v7, :cond_3
 
     aget-object v4, v3, v6
 
-    .line 63
+    .line 74
     .local v4, "service":Ljava/lang/String;
     :try_start_0
     const-string/jumbo v8, "CMSystemServer"
@@ -181,32 +223,46 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
+    .line 75
     iget-object v8, p0, Lorg/cyanogenmod/platform/internal/CMSystemServer;->mSystemServiceHelper:Lorg/cyanogenmod/platform/internal/common/CMSystemServiceHelper;
 
     invoke-virtual {v8, v4}, Lorg/cyanogenmod/platform/internal/common/CMSystemServiceHelper;->getServiceFor(Ljava/lang/String;)Lorg/cyanogenmod/platform/internal/CMSystemService;
 
     move-result-object v0
 
-    .line 65
+    .line 76
     .local v0, "cmSystemService":Lorg/cyanogenmod/platform/internal/CMSystemService;
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
 
-    .line 66
+    .line 77
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/CMSystemService;->getFeatureDeclaration()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 65
+    .line 76
     invoke-virtual {v8, v9}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    .line 78
+    invoke-static {}, Lorg/cyanogenmod/platform/internal/CMSystemServer;->coreAppsOnly()Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    .line 67
+    invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/CMSystemService;->isCoreService()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    .line 82
+    :cond_0
     const-string/jumbo v8, "CMSystemServer"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -229,30 +285,30 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
+    .line 83
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/CMSystemService;->getClass()Ljava/lang/Class;
 
     move-result-object v8
 
     invoke-virtual {v5, v8}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
-    .line 61
+    .line 72
     .end local v0    # "cmSystemService":Lorg/cyanogenmod/platform/internal/CMSystemService;
     :goto_1
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 70
+    .line 79
     .restart local v0    # "cmSystemService":Lorg/cyanogenmod/platform/internal/CMSystemService;
-    :cond_0
+    :cond_1
     const-string/jumbo v8, "CMSystemServer"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "Not starting service "
+    const-string/jumbo v10, "Not starting "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -262,10 +318,10 @@
 
     move-result-object v9
 
-    .line 71
-    const-string/jumbo v10, " due to feature not declared on device"
+    .line 80
+    const-string/jumbo v10, " - only parsing core apps"
 
-    .line 70
+    .line 79
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
@@ -274,18 +330,18 @@
 
     move-result-object v9
 
-    invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 73
+    .line 89
     .end local v0    # "cmSystemService":Lorg/cyanogenmod/platform/internal/CMSystemService;
     :catch_0
     move-exception v2
 
-    .line 74
+    .line 90
     .local v2, "e":Ljava/lang/Throwable;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -309,9 +365,48 @@
 
     goto :goto_1
 
-    .line 55
+    .line 86
     .end local v2    # "e":Ljava/lang/Throwable;
+    .restart local v0    # "cmSystemService":Lorg/cyanogenmod/platform/internal/CMSystemService;
+    :cond_2
+    :try_start_1
+    const-string/jumbo v8, "CMSystemServer"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v10, "Not starting service "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    .line 87
+    const-string/jumbo v10, " due to feature not declared on device"
+
+    .line 86
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_1
+
+    .line 66
+    .end local v0    # "cmSystemService":Lorg/cyanogenmod/platform/internal/CMSystemService;
     .end local v4    # "service":Ljava/lang/String;
-    :cond_1
+    :cond_3
     return-void
 .end method

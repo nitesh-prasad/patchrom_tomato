@@ -8,7 +8,9 @@
     value = {
         Lcyanogenmod/providers/ThemesContract$ThemesColumns;,
         Lcyanogenmod/providers/ThemesContract$MixnMatchColumns;,
-        Lcyanogenmod/providers/ThemesContract$PreviewColumns;
+        Lcyanogenmod/providers/ThemesContract$PreviewColumns;,
+        Lcyanogenmod/providers/ThemesContract$ThemeMixColumns;,
+        Lcyanogenmod/providers/ThemesContract$ThemeMixEntryColumns;
     }
 .end annotation
 

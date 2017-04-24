@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/display/ColorTemperatureController;
 
     .prologue
-    .line 130
+    .line 169
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/display/ColorTemperatureController$1;->this$0:Lorg/cyanogenmod/platform/internal/display/ColorTemperatureController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 133
+    .line 172
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/ColorTemperatureController$1;->this$0:Lorg/cyanogenmod/platform/internal/display/ColorTemperatureController;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/display/ColorTemperatureController;->-wrap0(Lorg/cyanogenmod/platform/internal/display/ColorTemperatureController;)V
 
-    .line 132
+    .line 171
     return-void
 .end method

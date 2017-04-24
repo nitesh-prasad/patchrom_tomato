@@ -977,7 +977,7 @@
     move-result-object v1
 
     .line 734
-    const/high16 v2, 0x3f030000    # 0.51171875f
+    const/high16 v2, 0x3f040000    # 0.515625f
 
     .line 733
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
@@ -2050,7 +2050,7 @@
     .locals 5
 
     .prologue
-    const v4, 0x3f060033
+    const v4, 0x3f080033
 
     .line 252
     new-instance v1, Landroid/app/backup/BackupManager;

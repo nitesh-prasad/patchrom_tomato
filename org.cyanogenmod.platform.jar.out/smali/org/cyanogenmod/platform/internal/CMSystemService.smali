@@ -20,3 +20,13 @@
 # virtual methods
 .method public abstract getFeatureDeclaration()Ljava/lang/String;
 .end method
+
+.method public isCoreService()Z
+    .locals 1
+
+    .prologue
+    .line 35
+    const/4 v0, 0x1
+
+    return v0
+.end method

@@ -27,13 +27,13 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 218
+    .line 354
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 220
+    .line 356
     iput-object p1, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 218
+    .line 354
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 224
+    .line 360
     iget-object v0, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -58,25 +58,25 @@
     .end annotation
 
     .prologue
-    .line 289
+    .line 425
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 290
+    .line 426
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 293
+    .line 429
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 294
+    .line 430
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x4
@@ -85,38 +85,38 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 295
+    .line 431
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 296
+    .line 432
     invoke-virtual {v1}, Landroid/os/Parcel;->createFloatArray()[F
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
 
-    .line 299
+    .line 435
     .local v2, "_result":[F
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 300
+    .line 436
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 302
+    .line 438
     return-object v2
 
-    .line 298
+    .line 434
     .end local v2    # "_result":[F
     :catchall_0
     move-exception v3
 
-    .line 299
+    .line 435
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 300
+    .line 436
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 298
+    .line 434
     throw v3
 .end method
 
@@ -129,25 +129,25 @@
     .end annotation
 
     .prologue
-    .line 499
+    .line 635
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 500
+    .line 636
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 503
+    .line 639
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 504
+    .line 640
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x10
@@ -156,38 +156,38 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 505
+    .line 641
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 506
+    .line 642
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 509
+    .line 645
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 510
+    .line 646
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 512
+    .line 648
     return v2
 
-    .line 508
+    .line 644
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
-    .line 509
+    .line 645
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 510
+    .line 646
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 508
+    .line 644
     throw v3
 .end method
 
@@ -200,25 +200,25 @@
     .end annotation
 
     .prologue
-    .line 232
+    .line 368
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 233
+    .line 369
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 236
+    .line 372
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 237
+    .line 373
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x1
@@ -227,17 +227,17 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 238
+    .line 374
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 239
+    .line 375
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 240
+    .line 376
     sget-object v3, Lcyanogenmod/hardware/LiveDisplayConfig;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -248,35 +248,35 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 247
+    .line 383
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 248
+    .line 384
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 250
+    .line 386
     return-object v2
 
-    .line 243
+    .line 379
     :cond_0
     const/4 v2, 0x0
 
     .local v2, "_result":Lcyanogenmod/hardware/LiveDisplayConfig;
     goto :goto_0
 
-    .line 246
+    .line 382
     .end local v2    # "_result":Lcyanogenmod/hardware/LiveDisplayConfig;
     :catchall_0
     move-exception v3
 
-    .line 247
+    .line 383
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 248
+    .line 384
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 246
+    .line 382
     throw v3
 .end method
 
@@ -289,25 +289,25 @@
     .end annotation
 
     .prologue
-    .line 429
+    .line 565
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 430
+    .line 566
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 433
+    .line 569
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 434
+    .line 570
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xc
@@ -316,38 +316,127 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 435
+    .line 571
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 436
+    .line 572
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 439
+    .line 575
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 440
+    .line 576
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 442
+    .line 578
     return v2
 
-    .line 438
+    .line 574
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
-    .line 439
+    .line 575
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 440
+    .line 576
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 438
+    .line 574
+    throw v3
+.end method
+
+.method public getDefaultPictureAdjustment()Lcyanogenmod/hardware/HSIC;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 709
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 710
+    .local v0, "_data":Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 713
+    .local v1, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 714
+    iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v4, 0x14
+
+    const/4 v5, 0x0
+
+    invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 715
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 716
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 717
+    sget-object v3, Lcyanogenmod/hardware/HSIC;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcyanogenmod/hardware/HSIC;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 724
+    :goto_0
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 725
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 727
+    return-object v2
+
+    .line 720
+    :cond_0
+    const/4 v2, 0x0
+
+    .local v2, "_result":Lcyanogenmod/hardware/HSIC;
+    goto :goto_0
+
+    .line 723
+    .end local v2    # "_result":Lcyanogenmod/hardware/HSIC;
+    :catchall_0
+    move-exception v3
+
+    .line 724
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 725
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 723
     throw v3
 .end method
 
@@ -355,7 +444,7 @@
     .locals 1
 
     .prologue
-    .line 228
+    .line 364
     const-string/jumbo v0, "cyanogenmod.hardware.ILiveDisplayService"
 
     return-object v0
@@ -370,25 +459,25 @@
     .end annotation
 
     .prologue
-    .line 254
+    .line 390
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 255
+    .line 391
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 258
+    .line 394
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 259
+    .line 395
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x2
@@ -397,38 +486,38 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 260
+    .line 396
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 261
+    .line 397
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 264
+    .line 400
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 265
+    .line 401
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 267
+    .line 403
     return v2
 
-    .line 263
+    .line 399
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
-    .line 264
+    .line 400
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 265
+    .line 401
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 263
+    .line 399
     throw v3
 .end method
 
@@ -441,25 +530,25 @@
     .end annotation
 
     .prologue
-    .line 464
+    .line 600
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 465
+    .line 601
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 468
+    .line 604
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 469
+    .line 605
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xe
@@ -468,38 +557,127 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 470
+    .line 606
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 471
+    .line 607
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 474
+    .line 610
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 475
+    .line 611
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 477
+    .line 613
     return v2
 
-    .line 473
+    .line 609
     .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
-    .line 474
+    .line 610
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 475
+    .line 611
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 473
+    .line 609
+    throw v3
+.end method
+
+.method public getPictureAdjustment()Lcyanogenmod/hardware/HSIC;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 687
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 688
+    .local v0, "_data":Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 691
+    .local v1, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 692
+    iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v4, 0x13
+
+    const/4 v5, 0x0
+
+    invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 693
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 694
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 695
+    sget-object v3, Lcyanogenmod/hardware/HSIC;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcyanogenmod/hardware/HSIC;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 702
+    :goto_0
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 703
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 705
+    return-object v2
+
+    .line 698
+    :cond_0
+    const/4 v2, 0x0
+
+    .local v2, "_result":Lcyanogenmod/hardware/HSIC;
+    goto :goto_0
+
+    .line 701
+    .end local v2    # "_result":Lcyanogenmod/hardware/HSIC;
+    :catchall_0
+    move-exception v3
+
+    .line 702
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 703
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 701
     throw v3
 .end method
 
@@ -512,25 +690,25 @@
     .end annotation
 
     .prologue
-    .line 324
+    .line 460
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 325
+    .line 461
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 328
+    .line 464
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 329
+    .line 465
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x6
@@ -539,10 +717,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 330
+    .line 466
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 331
+    .line 467
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -553,18 +731,18 @@
 
     const/4 v2, 0x1
 
-    .line 334
+    .line 470
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 335
+    .line 471
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 337
+    .line 473
     return v2
 
-    .line 331
+    .line 467
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -572,18 +750,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 333
+    .line 469
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 334
+    .line 470
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 335
+    .line 471
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 333
+    .line 469
     throw v3
 .end method
 
@@ -596,25 +774,25 @@
     .end annotation
 
     .prologue
-    .line 516
+    .line 652
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 517
+    .line 653
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 520
+    .line 656
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 521
+    .line 657
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x11
@@ -623,10 +801,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 522
+    .line 658
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 523
+    .line 659
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -637,18 +815,18 @@
 
     const/4 v2, 0x1
 
-    .line 526
+    .line 662
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 527
+    .line 663
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 529
+    .line 665
     return v2
 
-    .line 523
+    .line 659
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -656,18 +834,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 525
+    .line 661
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 526
+    .line 662
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 527
+    .line 663
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 525
+    .line 661
     throw v3
 .end method
 
@@ -680,25 +858,25 @@
     .end annotation
 
     .prologue
-    .line 359
+    .line 495
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 360
+    .line 496
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 363
+    .line 499
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 364
+    .line 500
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x8
@@ -707,10 +885,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 365
+    .line 501
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 366
+    .line 502
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -721,18 +899,18 @@
 
     const/4 v2, 0x1
 
-    .line 369
+    .line 505
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 370
+    .line 506
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 372
+    .line 508
     return v2
 
-    .line 366
+    .line 502
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -740,18 +918,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 368
+    .line 504
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 369
+    .line 505
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 370
+    .line 506
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 368
+    .line 504
     throw v3
 .end method
 
@@ -764,25 +942,25 @@
     .end annotation
 
     .prologue
-    .line 394
+    .line 530
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 395
+    .line 531
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 398
+    .line 534
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 399
+    .line 535
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xa
@@ -791,10 +969,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 400
+    .line 536
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 401
+    .line 537
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -805,18 +983,18 @@
 
     const/4 v2, 0x1
 
-    .line 404
+    .line 540
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 405
+    .line 541
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 407
+    .line 543
     return v2
 
-    .line 401
+    .line 537
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -824,18 +1002,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 403
+    .line 539
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 404
+    .line 540
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 405
+    .line 541
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 403
+    .line 539
     throw v3
 .end method
 
@@ -851,25 +1029,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 341
+    .line 477
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 342
+    .line 478
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 345
+    .line 481
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v4, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 346
+    .line 482
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -877,7 +1055,7 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 347
+    .line 483
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x7
@@ -886,10 +1064,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 348
+    .line 484
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 349
+    .line 485
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -900,18 +1078,18 @@
 
     const/4 v2, 0x1
 
-    .line 352
+    .line 488
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 353
+    .line 489
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 355
+    .line 491
     return v2
 
-    .line 349
+    .line 485
     .end local v2    # "_result":Z
     :cond_1
     const/4 v2, 0x0
@@ -919,18 +1097,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 351
+    .line 487
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 352
+    .line 488
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 353
+    .line 489
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 351
+    .line 487
     throw v3
 .end method
 
@@ -946,25 +1124,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 533
+    .line 669
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 534
+    .line 670
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 537
+    .line 673
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v4, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 538
+    .line 674
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -972,7 +1150,7 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 539
+    .line 675
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x12
@@ -981,10 +1159,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 540
+    .line 676
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 541
+    .line 677
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -995,18 +1173,18 @@
 
     const/4 v2, 0x1
 
-    .line 544
+    .line 680
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 545
+    .line 681
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 547
+    .line 683
     return v2
 
-    .line 541
+    .line 677
     .end local v2    # "_result":Z
     :cond_1
     const/4 v2, 0x0
@@ -1014,18 +1192,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 543
+    .line 679
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 544
+    .line 680
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 545
+    .line 681
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 543
+    .line 679
     throw v3
 .end method
 
@@ -1041,25 +1219,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 376
+    .line 512
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 377
+    .line 513
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 380
+    .line 516
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v4, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 381
+    .line 517
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -1067,7 +1245,7 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 382
+    .line 518
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x9
@@ -1076,10 +1254,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 383
+    .line 519
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 384
+    .line 520
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1090,18 +1268,18 @@
 
     const/4 v2, 0x1
 
-    .line 387
+    .line 523
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 388
+    .line 524
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 390
+    .line 526
     return v2
 
-    .line 384
+    .line 520
     .end local v2    # "_result":Z
     :cond_1
     const/4 v2, 0x0
@@ -1109,18 +1287,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 386
+    .line 522
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 387
+    .line 523
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 388
+    .line 524
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 386
+    .line 522
     throw v3
 .end method
 
@@ -1134,28 +1312,28 @@
     .end annotation
 
     .prologue
-    .line 306
+    .line 442
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 307
+    .line 443
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 310
+    .line 446
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 311
+    .line 447
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeFloatArray([F)V
 
-    .line 312
+    .line 448
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x5
@@ -1164,10 +1342,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 313
+    .line 449
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 314
+    .line 450
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1178,18 +1356,18 @@
 
     const/4 v2, 0x1
 
-    .line 317
+    .line 453
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 318
+    .line 454
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 320
+    .line 456
     return v2
 
-    .line 314
+    .line 450
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -1197,18 +1375,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 316
+    .line 452
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 317
+    .line 453
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 318
+    .line 454
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 316
+    .line 452
     throw v3
 .end method
 
@@ -1224,25 +1402,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 411
+    .line 547
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 412
+    .line 548
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 415
+    .line 551
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v4, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 416
+    .line 552
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
@@ -1250,7 +1428,7 @@
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 417
+    .line 553
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xb
@@ -1259,10 +1437,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 418
+    .line 554
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 419
+    .line 555
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1273,18 +1451,18 @@
 
     const/4 v2, 0x1
 
-    .line 422
+    .line 558
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 423
+    .line 559
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 425
+    .line 561
     return v2
 
-    .line 419
+    .line 555
     .end local v2    # "_result":Z
     :cond_1
     const/4 v2, 0x0
@@ -1292,18 +1470,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 421
+    .line 557
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 422
+    .line 558
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 423
+    .line 559
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 421
+    .line 557
     throw v3
 .end method
 
@@ -1317,28 +1495,28 @@
     .end annotation
 
     .prologue
-    .line 446
+    .line 582
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 447
+    .line 583
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 450
+    .line 586
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 451
+    .line 587
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 452
+    .line 588
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xd
@@ -1347,10 +1525,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 453
+    .line 589
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 454
+    .line 590
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1361,18 +1539,18 @@
 
     const/4 v2, 0x1
 
-    .line 457
+    .line 593
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 458
+    .line 594
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 460
+    .line 596
     return v2
 
-    .line 454
+    .line 590
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -1380,18 +1558,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 456
+    .line 592
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 457
+    .line 593
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 458
+    .line 594
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 456
+    .line 592
     throw v3
 .end method
 
@@ -1405,28 +1583,28 @@
     .end annotation
 
     .prologue
-    .line 271
+    .line 407
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 272
+    .line 408
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 275
+    .line 411
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 276
+    .line 412
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 277
+    .line 413
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x3
@@ -1435,10 +1613,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 278
+    .line 414
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 279
+    .line 415
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1449,18 +1627,18 @@
 
     const/4 v2, 0x1
 
-    .line 282
+    .line 418
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 283
+    .line 419
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 285
+    .line 421
     return v2
 
-    .line 279
+    .line 415
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -1468,18 +1646,18 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 281
+    .line 417
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 282
+    .line 418
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 283
+    .line 419
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 281
+    .line 417
     throw v3
 .end method
 
@@ -1493,28 +1671,28 @@
     .end annotation
 
     .prologue
-    .line 481
+    .line 617
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 482
+    .line 618
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 485
+    .line 621
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 486
+    .line 622
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 487
+    .line 623
     iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xf
@@ -1523,10 +1701,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 488
+    .line 624
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 489
+    .line 625
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1537,18 +1715,18 @@
 
     const/4 v2, 0x1
 
-    .line 492
+    .line 628
     .local v2, "_result":Z
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 493
+    .line 629
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 495
+    .line 631
     return v2
 
-    .line 489
+    .line 625
     .end local v2    # "_result":Z
     :cond_0
     const/4 v2, 0x0
@@ -1556,17 +1734,126 @@
     .restart local v2    # "_result":Z
     goto :goto_0
 
-    .line 491
+    .line 627
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v3
 
-    .line 492
+    .line 628
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 493
+    .line 629
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 491
+    .line 627
     throw v3
+.end method
+
+.method public setPictureAdjustment(Lcyanogenmod/hardware/HSIC;)Z
+    .locals 6
+    .param p1, "adj"    # Lcyanogenmod/hardware/HSIC;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 731
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 732
+    .local v0, "_data":Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 735
+    .local v1, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string/jumbo v3, "cyanogenmod.hardware.ILiveDisplayService"
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 736
+    if-eqz p1, :cond_0
+
+    .line 737
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 738
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v3}, Lcyanogenmod/hardware/HSIC;->writeToParcel(Landroid/os/Parcel;I)V
+
+    .line 743
+    :goto_0
+    iget-object v3, p0, Lcyanogenmod/hardware/ILiveDisplayService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v4, 0x15
+
+    const/4 v5, 0x0
+
+    invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 744
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 745
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const/4 v2, 0x1
+
+    .line 748
+    .local v2, "_result":Z
+    :goto_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 749
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 751
+    return v2
+
+    .line 741
+    .end local v2    # "_result":Z
+    :cond_0
+    const/4 v3, 0x0
+
+    :try_start_1
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    .line 747
+    :catchall_0
+    move-exception v3
+
+    .line 748
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 749
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 747
+    throw v3
+
+    .line 745
+    :cond_1
+    const/4 v2, 0x0
+
+    .restart local v2    # "_result":Z
+    goto :goto_1
 .end method

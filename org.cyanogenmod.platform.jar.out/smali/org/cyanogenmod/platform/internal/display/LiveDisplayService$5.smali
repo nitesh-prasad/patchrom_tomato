@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
     .prologue
-    .line 565
+    .line 586
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$5;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,16 +41,16 @@
     .locals 2
 
     .prologue
-    .line 568
+    .line 589
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$5;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-get8(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$State;
+    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-get9(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$State;
 
     move-result-object v0
 
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$5;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
-    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-get9(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)Lcom/android/server/twilight/TwilightManager;
+    invoke-static {v1}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-get10(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)Lcom/android/server/twilight/TwilightManager;
 
     move-result-object v1
 
@@ -60,18 +60,18 @@
 
     iput-object v1, v0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$State;->mTwilight:Lcom/android/server/twilight/TwilightState;
 
-    .line 569
+    .line 590
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$5;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
     sget v1, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->TWILIGHT_CHANGED:I
 
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-wrap7(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;I)V
 
-    .line 570
+    .line 591
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$5;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-wrap3(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)V
 
-    .line 567
+    .line 588
     return-void
 .end method

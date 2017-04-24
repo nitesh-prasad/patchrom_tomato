@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcyanogenmod/hardware/ILiveDisplayService$NoOp;,
         Lcyanogenmod/hardware/ILiveDisplayService$Stub;
     }
 .end annotation
@@ -47,6 +48,14 @@
     .end annotation
 .end method
 
+.method public abstract getDefaultPictureAdjustment()Lcyanogenmod/hardware/HSIC;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getMode()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -56,6 +65,14 @@
 .end method
 
 .method public abstract getNightColorTemperature()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getPictureAdjustment()Lcyanogenmod/hardware/HSIC;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -152,6 +169,14 @@
 .end method
 
 .method public abstract setNightColorTemperature(I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setPictureAdjustment(Lcyanogenmod/hardware/HSIC;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

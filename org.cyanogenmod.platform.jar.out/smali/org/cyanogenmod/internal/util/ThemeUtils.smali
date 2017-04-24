@@ -1520,6 +1520,9 @@
 
 .method public static createUiContext(Landroid/content/Context;)Landroid/content/Context;
     .locals 1
+    .param p0, "context"    # Landroid/content/Context;
+
+    .prologue
     const/4 v0, 0x0
 
     return-object v0

@@ -29,6 +29,8 @@
 
 .field private mCallback:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TransitionListener;
 
+.field private final mHysteresisLux:F
+
 .field private final mLightSensor:Landroid/hardware/Sensor;
 
 .field private mLightSensorEnabled:Z
@@ -75,7 +77,15 @@
     return-object v0
 .end method
 
-.method static synthetic -get3(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)Z
+.method static synthetic -get3(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)F
+    .locals 1
+
+    iget v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mHysteresisLux:F
+
+    return v0
+.end method
+
+.method static synthetic -get4(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)Z
     .locals 1
 
     iget-boolean v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensorEnabled:Z
@@ -83,7 +93,7 @@
     return v0
 .end method
 
-.method static synthetic -get4(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;
+.method static synthetic -get5(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;
     .locals 1
 
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLuxHandler:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;
@@ -91,7 +101,7 @@
     return-object v0
 .end method
 
-.method static synthetic -get5(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;
+.method static synthetic -get6(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;
     .locals 1
 
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mRingBuffer:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;
@@ -99,7 +109,7 @@
     return-object v0
 .end method
 
-.method static synthetic -get6(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)I
+.method static synthetic -get7(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)I
     .locals 1
 
     iget v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mState:I
@@ -107,7 +117,7 @@
     return v0
 .end method
 
-.method static synthetic -get7(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)I
+.method static synthetic -get8(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)I
     .locals 1
 
     iget v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mThresholdDuration:I
@@ -115,7 +125,7 @@
     return v0
 .end method
 
-.method static synthetic -get8(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)F
+.method static synthetic -get9(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)F
     .locals 1
 
     iget v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mThresholdLux:F
@@ -158,58 +168,62 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;FI)V
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;FFI)V
     .locals 2
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "looper"    # Landroid/os/Looper;
     .param p3, "thresholdLux"    # F
-    .param p4, "thresholdDuration"    # I
+    .param p4, "hysteresisLux"    # F
+    .param p5, "thresholdDuration"    # I
 
     .prologue
     const/4 v1, 0x0
 
-    .line 63
+    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
+    .line 44
     iput-boolean v1, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensorEnabled:Z
 
-    .line 46
+    .line 47
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mAmbientLux:F
 
-    .line 51
+    .line 52
     iput v1, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mState:I
 
-    .line 129
+    .line 134
     new-instance v0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$1;
 
     invoke-direct {v0, p0}, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$1;-><init>(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;)V
 
     iput-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mListener:Landroid/hardware/SensorEventListener;
 
-    .line 65
+    .line 66
     new-instance v0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;
 
     invoke-direct {v0, p0, p2}, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;-><init>(Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLuxHandler:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;
 
-    .line 66
+    .line 67
     iput p3, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mThresholdLux:F
 
-    .line 67
-    iput p4, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mThresholdDuration:I
-
     .line 68
+    iput p4, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mHysteresisLux:F
+
+    .line 69
+    iput p5, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mThresholdDuration:I
+
+    .line 70
     new-instance v0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;
 
-    invoke-direct {v0, p4}, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;-><init>(I)V
+    invoke-direct {v0, p5}, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;-><init>(I)V
 
     iput-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mRingBuffer:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;
 
-    .line 70
+    .line 72
     const-string/jumbo v0, "sensor"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -220,7 +234,7 @@
 
     iput-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 71
+    .line 73
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x5
@@ -231,22 +245,22 @@
 
     iput-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensor:Landroid/hardware/Sensor;
 
-    .line 72
+    .line 74
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 73
+    .line 75
     const v1, 0x10e006b
 
-    .line 72
+    .line 74
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
     iput v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensorRate:I
 
-    .line 64
+    .line 65
     return-void
 .end method
 
@@ -257,14 +271,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 154
+    .line 159
     if-eqz p1, :cond_0
 
     iget-boolean v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensorEnabled:Z
 
     if-eqz v0, :cond_2
 
-    .line 158
+    .line 163
     :cond_0
     if-nez p1, :cond_1
 
@@ -272,60 +286,60 @@
 
     if-eqz v0, :cond_1
 
-    .line 159
+    .line 164
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mListener:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 160
+    .line 165
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLuxHandler:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;->clear()V
 
-    .line 161
+    .line 166
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mAmbientLux:F
 
-    .line 162
+    .line 167
     iput v2, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mState:I
 
-    .line 163
+    .line 168
     iput-boolean v2, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensorEnabled:Z
 
-    .line 164
+    .line 169
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mRingBuffer:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TimedMovingAverageRingBuffer;->clear()V
 
-    .line 153
+    .line 158
     :cond_1
     :goto_0
     return-void
 
-    .line 155
+    .line 160
     :cond_2
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensorEnabled:Z
 
-    .line 156
+    .line 161
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mListener:Landroid/hardware/SensorEventListener;
 
     iget-object v2, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensor:Landroid/hardware/Sensor;
 
-    .line 157
+    .line 162
     iget v3, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLightSensorRate:I
 
     mul-int/lit16 v3, v3, 0x3e8
 
     iget-object v4, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mLuxHandler:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$AmbientLuxHandler;
 
-    .line 156
+    .line 161
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Handler;)Z
 
     goto :goto_0
@@ -338,15 +352,15 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 169
+    .line 174
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 170
+    .line 175
     const-string/jumbo v0, "  AmbientLuxObserver State:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 171
+    .line 176
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -369,7 +383,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 172
+    .line 177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -392,7 +406,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 173
+    .line 178
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -415,7 +429,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 174
+    .line 179
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -442,7 +456,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 168
+    .line 173
     return-void
 .end method
 
@@ -452,7 +466,7 @@
     .prologue
     monitor-enter p0
 
-    .line 145
+    .line 150
     :try_start_0
     iget v0, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mState:I
     :try_end_0
@@ -477,11 +491,11 @@
     .prologue
     monitor-enter p0
 
-    .line 149
+    .line 154
     :try_start_0
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver;->mCallback:Lorg/cyanogenmod/platform/internal/display/AmbientLuxObserver$TransitionListener;
 
-    .line 150
+    .line 155
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -493,10 +507,10 @@
 
     monitor-exit p0
 
-    .line 148
+    .line 153
     return-void
 
-    .line 150
+    .line 155
     :cond_0
     const/4 v0, 0x0
 

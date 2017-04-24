@@ -245,7 +245,7 @@
     iput-object v1, v0, Lorg/cyanogenmod/platform/internal/ManagedServices$Config;->bindPermission:Ljava/lang/String;
 
     .line 560
-    const v1, 0x3f060025
+    const v1, 0x3f080025
 
     iput v1, v0, Lorg/cyanogenmod/platform/internal/ManagedServices$Config;->clientLabel:I
 

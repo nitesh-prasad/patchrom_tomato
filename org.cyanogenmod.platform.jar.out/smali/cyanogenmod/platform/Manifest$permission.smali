@@ -37,6 +37,8 @@
 
 .field public static final MANAGE_ALARMS:Ljava/lang/String; = "cyanogenmod.permission.MANAGE_ALARMS"
 
+.field public static final MANAGE_AUDIO_SESSIONS:Ljava/lang/String; = "cyanogenmod.permission.MANAGE_AUDIO_SESSIONS"
+
 .field public static final MANAGE_LIVEDISPLAY:Ljava/lang/String; = "cyanogenmod.permission.MANAGE_LIVEDISPLAY"
 
 .field public static final MANAGE_PERSISTENT_STORAGE:Ljava/lang/String; = "cyanogenmod.permission.MANAGE_PERSISTENT_STORAGE"
@@ -66,6 +68,8 @@
 .field public static final READ_THEMES:Ljava/lang/String; = "cyanogenmod.permission.READ_THEMES"
 
 .field public static final READ_WEATHER:Ljava/lang/String; = "cyanogenmod.permission.READ_WEATHER"
+
+.field public static final SEND_PROTECTED_THEME_BROADCAST:Ljava/lang/String; = "cyanogenmod.permission.SEND_PROTECTED_THEME_BROADCAST"
 
 .field public static final THIRD_PARTY_KEYGUARD:Ljava/lang/String; = "cyanogenmod.permission.THIRD_PARTY_KEYGUARD"
 

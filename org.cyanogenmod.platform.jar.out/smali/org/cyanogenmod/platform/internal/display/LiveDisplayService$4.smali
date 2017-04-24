@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
     .prologue
-    .line 511
+    .line 532
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$4;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +42,10 @@
     .param p1, "lowPowerMode"    # Z
 
     .prologue
-    .line 514
+    .line 535
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$4;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-get8(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$State;
+    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-get9(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$State;
 
     move-result-object v0
 
@@ -53,23 +53,23 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 515
+    .line 536
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$4;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
-    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-get8(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$State;
+    invoke-static {v0}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-get9(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;)Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$State;
 
     move-result-object v0
 
     iput-boolean p1, v0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$State;->mLowPowerMode:Z
 
-    .line 516
+    .line 537
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService$4;->this$0:Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;
 
     sget v1, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->MODE_CHANGED:I
 
     invoke-static {v0, v1}, Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;->-wrap7(Lorg/cyanogenmod/platform/internal/display/LiveDisplayService;I)V
 
-    .line 513
+    .line 534
     :cond_0
     return-void
 .end method

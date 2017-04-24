@@ -38,7 +38,7 @@ function mergyXmlPart() {
 	done
 }
 
-if [ $1 = "framework-res" ]
-then
+if [ $1 = "framework-res" ]; then
+  applyPatch $1 $2
   $XMLMERGYTOOL $1/res/values $2/res/values
 fi
